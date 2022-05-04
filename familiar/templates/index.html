@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Familiares</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Edad</td>
+                    <td>Fecha de Nacimiento</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for familiar in familiars %}
+                <tr>
+                    <td>{{ familiar.id }}</td>
+                    <td>{{ familiar.name }}</td>
+                    <td>{{ familiar.surname }}</td>
+                    <td>{{ familiar.edad }}</td>
+                    <td>{{ familiar.nacimiento }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
